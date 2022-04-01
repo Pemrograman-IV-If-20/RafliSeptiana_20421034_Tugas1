@@ -1,0 +1,72 @@
+
+
+import 'package:flutter/cupertino.dart';
+import 'package:flutter/material.dart';
+
+void main (){
+  runApp(MyApp());
+}
+class MyApp extends StatelessWidget {
+
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+      debugShowCheckedModeBanner: false,
+      home: Scaffold(
+        appBar: AppBar(
+          title: Text(
+            'MyAplikasi'
+          ),
+          centerTitle: true,
+        ),
+        body: Column(
+          // mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            ListTile(
+              contentPadding: EdgeInsets.symmetric(horizontal: 30),
+              title: Text('Nama: Rafli Septiana'),
+              subtitle: Text(
+                'Npm : 20421034'
+                ),
+              leading: CircleAvatar(
+                backgroundImage: AssetImage("assets/images/gh.jpg"),
+              ),
+              trailing: Text('10:00 PM'),
+            ),
+            Divider(
+              color: Colors.amber,
+            ),
+            ListTile(
+              focusColor: Colors.amber,
+              contentPadding: EdgeInsets.symmetric(horizontal: 30),
+              title: Text('Nama: Saitama'),
+              subtitle: Text(
+                'Npm : 20421056'
+                ),
+              leading: CircleAvatar(
+                backgroundImage: AssetImage("assets/images/kk.jpg"),
+              ),
+              trailing: Text('11:00 PM'),
+            ),
+            Divider(
+              color: Colors.green,
+              height: 2,
+            ),
+            ListTile(
+              hoverColor: Colors.black,
+              contentPadding: EdgeInsets.symmetric(horizontal: 30),
+              title: Text('Nama: Guragura'),
+              subtitle: Text(
+                'Npm : 20421078'
+                ),
+              leading: CircleAvatar(
+                backgroundImage: AssetImage("assets/images/gh.jpg"),
+              ),
+              trailing: Text('12:00 PM'),
+            ),
+          ],
+        ),
+      ),
+    );
+  }
+}
